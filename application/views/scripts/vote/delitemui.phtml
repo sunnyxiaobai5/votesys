@@ -1,0 +1,28 @@
+<!DOCTYPE table PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css">
+* {
+	text-align: center;
+}
+</style>
+</head>
+<body style="width: 960px; margin: 0 auto; background-color: silver;">
+	<table style="width: 900px; margin: auto; background: white;">
+		<tr style="background-color: gray;">
+			<th>名称</th>
+			<th>票数</th>
+			<th>描述</th>
+			<th>删除选项</th>
+		</tr>
+		<?php foreach ($this->items as $item){?>
+		<tr>
+			<td><?php echo $item['name'];?></td>
+			<td><?php echo $item['vote_count'];?></td>
+			<td><?php echo $item['description'];?></td>
+			<td><a href="/vote/delitem?id=<?php echo $item['id']?>">删除</a></td>
+		</tr>
+		<?php }?>
+	</table>
+</body>
+</html>

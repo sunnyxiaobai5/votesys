@@ -1,0 +1,28 @@
+<!DOCTYPE table PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css">
+* {
+	text-align: center;
+}
+</style>
+</head>
+<body style="width: 960px; margin: 0 auto; background-color: silver;">
+	<table style="width: 900px; margin: auto; background: white;">
+		<tr style="background-color: gray;">
+			<th>º«¬º∫≈</th>
+			<th>IP</th>
+			<th>√Ë ˆ</th>
+			<th>∆Ù”√</th>
+		</tr>
+		<?php foreach ($this->items as $item){?>
+		<tr>
+			<td><?php echo $item['id'];?></td>
+			<td><?php echo $item['ip']?></td>
+			<td></td>
+			<td><a href="/filter/enableip?id=<?php echo $item['id']?>">∆Ù”√</a></td>
+		</tr>
+		<?php }?>
+	</table>
+</body>
+</html>
